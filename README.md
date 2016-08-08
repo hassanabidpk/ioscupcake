@@ -1,5 +1,6 @@
 iOS Cupcake App
 =====================================
+[![Build Status](https://travis-ci.org/hassanabidpk/ioscupcake.svg?branch=master)](https://travis-ci.org/hassanabidpk/ioscupcake)
 
 This sample demonstrates usage of Django Rest Api for [Django Cupcakeshop tutorial](https://github.com/DjangoGirlsSeoul/djangocupcakeshop)
 
