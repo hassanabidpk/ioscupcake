@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vlc-LT-yfs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cupcakes-->
+        <scene sceneID="Q1G-04-c12">
+            <objects>
+                <tableViewController title="Cupcakes" id="lIT-T8-H9U" customClass="CupcakeTableViewController" customModule="iOSCupcake" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="28" sectionFooterHeight="28" id="22F-SF-hMS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CupcakeTableViewCell" rowHeight="300" id="A4W-f2-bcb" customClass="CupcakeTableViewCell" customModule="iOSCupcake" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A4W-f2-bcb" id="Tlk-6v-nN7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="299.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lH5-rt-8bO">
+                                            <rect key="frame" x="8" y="8" width="584" height="292"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="0.0" y="23" width="400" height="268.5"/>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwa-1c-YeH">
+                                            <rect key="frame" x="68" y="109" width="464" height="27"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="27" id="2np-tZ-c7Y"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="99" y="95" width="186" height="27"/>
+                                            </variation>
+                                        </label>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xiw-Wj-vBo" customClass="RatingControl" customModule="iOSCupcake" customModuleProvider="target">
+                                            <rect key="frame" x="100" y="187" width="244" height="80"/>
+                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                <rect key="frame" x="99" y="190" width="192" height="40"/>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wwa-1c-YeH" firstAttribute="leading" secondItem="Tlk-6v-nN7" secondAttribute="leadingMargin" constant="60" id="6bN-04-Ujr"/>
+                                        <constraint firstItem="wwa-1c-YeH" firstAttribute="centerX" secondItem="Xiw-Wj-vBo" secondAttribute="centerX" id="FEn-pu-dDc"/>
+                                        <constraint firstItem="wwa-1c-YeH" firstAttribute="top" secondItem="Tlk-6v-nN7" secondAttribute="top" constant="109" id="JUb-Qs-ll9"/>
+                                        <constraint firstItem="Xiw-Wj-vBo" firstAttribute="top" secondItem="wwa-1c-YeH" secondAttribute="bottom" constant="51" id="NFJ-u2-07y"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lH5-rt-8bO" secondAttribute="trailing" id="U0H-qZ-mpY"/>
+                                        <constraint firstItem="Xiw-Wj-vBo" firstAttribute="centerX" secondItem="Tlk-6v-nN7" secondAttribute="centerX" id="Wjj-Om-KYV"/>
+                                        <constraint firstItem="lH5-rt-8bO" firstAttribute="leading" secondItem="Tlk-6v-nN7" secondAttribute="leadingMargin" id="i6a-us-sfs"/>
+                                        <constraint firstItem="Xiw-Wj-vBo" firstAttribute="leading" secondItem="Tlk-6v-nN7" secondAttribute="leading" constant="30" id="m4G-MS-n7k"/>
+                                        <constraint firstItem="lH5-rt-8bO" firstAttribute="top" secondItem="Tlk-6v-nN7" secondAttribute="topMargin" id="tFj-Rq-FdR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lH5-rt-8bO" secondAttribute="bottom" constant="-8.5" id="ve2-yt-maz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xiw-Wj-vBo" secondAttribute="bottom" constant="25" id="xfv-Nz-Wnd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cupcakeImage" destination="lH5-rt-8bO" id="fHd-nV-lJ6"/>
+                                    <outlet property="cupcakeName" destination="wwa-1c-YeH" id="RGv-nt-p7k"/>
+                                    <outlet property="rating" destination="Xiw-Wj-vBo" id="GVF-a7-j8F"/>
+                                    <segue destination="Q5u-1h-YkE" kind="show" identifier="showCupcake" action="showDetailViewController:sender:" id="DXB-Ja-jpN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lIT-T8-H9U" id="LOQ-9g-XqQ"/>
+                            <outlet property="delegate" destination="lIT-T8-H9U" id="q97-Od-aiB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="iOS Cupcakes" id="V8m-Zo-J7Y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2na-Ts-Xmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="432"/>
+        </scene>
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="iOSCupcake" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +91,103 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="456" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uyF-hs-Hil">
+                                <rect key="frame" x="20" y="72" width="400" height="456"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="748" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="250" translatesAutoresizingMaskIntoConstraints="NO" id="Es2-QR-gRm">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgc-B4-LmG" userLabel="Name">
+                                        <rect key="frame" x="0.0" y="250" width="400" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xJV-kC-tzF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-NT-N6X" customClass="RatingControl" customModule="iOSCupcake" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="290" width="400" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="400" id="Lur-d8-iAx"/>
+                                            <constraint firstAttribute="height" constant="44" id="MNS-TO-sHY"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="74" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-hR-kBR">
+                                        <rect key="frame" x="0.0" y="334" width="400" height="122"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tOh-NT-N6X" firstAttribute="centerX" secondItem="uyF-hs-Hil" secondAttribute="centerX" id="0Cp-Hz-Ay0"/>
+                                    <constraint firstItem="tOh-NT-N6X" firstAttribute="centerX" secondItem="uyF-hs-Hil" secondAttribute="centerX" id="HJZ-no-ulg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Es2-QR-gRm" secondAttribute="trailing" id="SeR-Qz-gW7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Es2-QR-gRm" secondAttribute="trailing" id="bu1-cq-Gtf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uyF-hs-Hil" secondAttribute="bottom" constant="176" id="0Gt-jx-91e"/>
+                            <constraint firstItem="uyF-hs-Hil" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3UM-NW-Seu"/>
+                            <constraint firstItem="uyF-hs-Hil" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="tys-2K-Khd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tys-2K-Khd"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="bLS-WT-D4H"/>
+                    <connections>
+                        <outlet property="cakeImage" destination="Es2-QR-gRm" id="Cxv-OA-9JJ"/>
+                        <outlet property="cakeTitle" destination="bgc-B4-LmG" id="xWk-eX-5pa"/>
+                        <outlet property="price" destination="KPR-hR-kBR" id="GLX-Qf-Mx8"/>
+                        <outlet property="rating" destination="tOh-NT-N6X" id="O7z-KJ-10Q"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2294" y="432"/>
+        </scene>
+        <!--iOS Cupcakes-->
+        <scene sceneID="2Cq-zO-LBh">
+            <objects>
+                <navigationController title="iOS Cupcakes" automaticallyAdjustsScrollViewInsets="NO" id="Vlc-LT-yfs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c38-Gt-DjC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lIT-T8-H9U" kind="relationship" relationship="rootViewController" id="0wC-3t-qJj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VRc-bC-uCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43" y="432"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="csf-NP-h9g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q5u-1h-YkE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FLh-xT-8XE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xiy-0h-yhu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYh-00-wTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="432"/>
         </scene>
     </scenes>
 </document>
