@@ -1,6 +1,15 @@
 language: objective-c
 osx_image: xcode7.3
+podfile: Podfile
 xcode_workspace: iOSCupcake.xcworkspace
 xcode_scheme: iOSCupcake
 xcode_sdk: iphonesimulator9.1
+before_install:
+- gem install cocoapods
+- export LANG=en_US.UTF-8
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+- pod before_install
 # script: xcodebuild -scheme iOSCupcake -workspace iOSCupcake.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+notifications:
+  email: false
