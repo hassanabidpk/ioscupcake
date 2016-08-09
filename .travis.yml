@@ -1,3 +1,6 @@
 language: objective-c
 osx_image: xcode7.3
-script: xcodebuild -scheme iOSCupcake -workspace iOSCupcake.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+xcode_workspace: iOSCupcake.xcworkspace
+xcode_scheme: iOSCupcake
+xcode_sdk: iphonesimulator9.1
+# script: xcodebuild -scheme iOSCupcake -workspace iOSCupcake.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
