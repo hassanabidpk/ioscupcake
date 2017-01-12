@@ -34,13 +34,15 @@ class DetailViewController: UIViewController {
     func setupUI() {
         
         
-        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(cancel))
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(cancel))
     
         self.navigationItem.leftBarButtonItem = backButton
         
-        cakeImage.kf_setImageWithURL(NSURL(string: "\(WEBSITE_BASE_URL)\(cupcake.image)")!,
-                                             placeholderImage: nil,
-                                             optionsInfo: [.Transition(ImageTransition.Fade(1))])
+        cakeImage.kf.setImage(with: URL(string: "\(WEBSITE_BASE_URL)\(cupcake.image)")!,
+                                      placeholder: nil,
+                                      options: [.transition(.fade(1))],
+                                      progressBlock: nil,
+                                      completionHandler: nil)
         
 
         cakeTitle.text = cupcake.name
@@ -56,9 +58,9 @@ class DetailViewController: UIViewController {
         let isPresentingInAddMode = presentingViewController is UINavigationController
         
         if isPresentingInAddMode {
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss(animated: true, completion: nil)
         } else {
-            navigationController!.popViewControllerAnimated(true)
+            navigationController!.popViewController(animated: true)
         }
     
     }

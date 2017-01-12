@@ -14,46 +14,46 @@ extension UIImage {
     // this is similar to Photoshop's "Color" layer blend mode
     // this is perfect for non-greyscale source images, and images that have both highlights and shadows that should be preserved
     // white will stay white and black will stay black as the lightness of the image is preserved
-    func tint(tintColor: UIColor) -> UIImage {
+    func tint(_ tintColor: UIColor) -> UIImage {
         
         return modifiedImage { context, rect in
             // draw black background - workaround to preserve color of partially transparent pixels
-            CGContextSetBlendMode(context, .Normal)
-            UIColor.blackColor().setFill()
-            CGContextFillRect(context, rect)
+            context.setBlendMode(.normal)
+            UIColor.black.setFill()
+            context.fill(rect)
             
             // draw original image
-            CGContextSetBlendMode(context, .Normal)
-            CGContextDrawImage(context, rect, self.CGImage)
+            context.setBlendMode(.normal)
+            context.draw(self.cgImage!, in: rect)
             
             // tint image (loosing alpha) - the luminosity of the original image is preserved
-            CGContextSetBlendMode(context, .Color)
+            context.setBlendMode(.color)
             tintColor.setFill()
-            CGContextFillRect(context, rect)
+            context.fill(rect)
             
             // mask by alpha values of original image
-            CGContextSetBlendMode(context, .DestinationIn)
-            CGContextDrawImage(context, rect, self.CGImage)
+            context.setBlendMode(.destinationIn)
+            context.draw(self.cgImage!, in: rect)
         }
     }
     
     // fills the alpha channel of the source image with the given color
     // any color information except to the alpha channel will be ignored
-    func fillAlpha(fillColor: UIColor) -> UIImage {
+    func fillAlpha(_ fillColor: UIColor) -> UIImage {
         
         return modifiedImage { context, rect in
             // draw tint color
-            CGContextSetBlendMode(context, .Normal)
+            context.setBlendMode(.normal)
             fillColor.setFill()
-            CGContextFillRect(context, rect)
+            context.fill(rect)
             
             // mask by alpha values of original image
-            CGContextSetBlendMode(context, .DestinationIn)
-            CGContextDrawImage(context, rect, self.CGImage)
+            context.setBlendMode(.destinationIn)
+            context.draw(self.cgImage!, in: rect)
         }
     }
     
-    private func modifiedImage(@noescape draw: (CGContext, CGRect) -> ()) -> UIImage {
+    fileprivate func modifiedImage(_ draw: (CGContext, CGRect) -> ()) -> UIImage {
         
         // using scale correctly preserves retina images
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
@@ -61,16 +61,16 @@ extension UIImage {
         assert(context != nil)
         
         // correctly rotate image
-        CGContextTranslateCTM(context, 0, size.height);
-        CGContextScaleCTM(context, 1.0, -1.0);
+        context.translateBy(x: 0, y: size.height);
+        context.scaleBy(x: 1.0, y: -1.0);
         
-        let rect = CGRectMake(0.0, 0.0, size.width, size.height)
+        let rect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         
         draw(context, rect)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
 }

@@ -16,7 +16,7 @@ import Kingfisher
 class CupcakeTableViewController: UITableViewController {
     
     let realm = try! Realm()
-    let results = try! Realm().objects(Cupcake.self).sorted("rating")
+    let results = try! Realm().objects(Cupcake.self).sorted(byProperty: "rating")
     var notificationToken: NotificationToken?
     
     let API_BASE_URL = "https://djangocupcakeshop.azurewebsites.net/api/v1/cupcakes"
@@ -31,23 +31,20 @@ class CupcakeTableViewController: UITableViewController {
         // Set results notification block
         self.notificationToken = results.addNotificationBlock { (changes: RealmCollectionChange) in
             switch changes {
-            case .Initial:
+            case .initial:
                 print("Results are now populated and can be accessed without blocking the UI")
                 self.tableView.reloadData()
                 print("results.count: \(self.results.count)")
                 break
-            case .Update(_, let deletions, let insertions, let modifications):
+            case .update(_, let deletions, let insertions, let modifications):
                 print(" Query results have changed, so apply them to the TableView")
                 self.tableView.beginUpdates()
-                self.tableView.insertRowsAtIndexPaths(insertions.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
-                self.tableView.deleteRowsAtIndexPaths(deletions.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
-                self.tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
+                self.tableView.insertRows(at: insertions.map { IndexPath (row: $0, section: 0) } , with: .automatic)
+                self.tableView.deleteRows(at: deletions.map { IndexPath (row: $0, section: 0)}, with: .automatic)
+                self.tableView.reloadRows(at: modifications.map { IndexPath (row : $0, section: 0)}, with: .automatic)
                 self.tableView.endUpdates()
                 break
-            case .Error(let err):
+            case .error(let err):
                 // An error occurred while opening the Realm file on the background worker thread
                 fatalError("\(err)")
                 break
@@ -62,9 +59,9 @@ class CupcakeTableViewController: UITableViewController {
         
         self.clearsSelectionOnViewWillAppear = false
     
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add,
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add,
                                         target: self, action: #selector(add))
-        let downloadButton = UIBarButtonItem(image: UIImage(named: "download"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(update))
+        let downloadButton = UIBarButtonItem(image: UIImage(named: "download"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(update))
         self.navigationItem.rightBarButtonItems = [addButton,downloadButton]
         if(results.count == 0) {
             getCupcakesviaApi()
@@ -74,20 +71,20 @@ class CupcakeTableViewController: UITableViewController {
     //MARK: API
     func getCupcakesviaApi() {
     
-        let params = ["format": "json"]
-        Alamofire.request(.GET, API_BASE_URL, parameters: params)
+        let params: Parameters = ["format": "json"]
+        Alamofire.request(API_BASE_URL, parameters: params)
             .responseJSON { response in
                 
                 switch response.result {
                 
-                case .Success:
+                case .success:
                     if let value = response.result.value {
                         let json = JSON(value)
                         print("JSON: \(json.count)")
                         self.backgroundAdd(json)
                         
                     }
-                case .Failure(let error):
+                case .failure(let error):
                     print(error)
                 }
                 
@@ -111,13 +108,13 @@ class CupcakeTableViewController: UITableViewController {
         getCupcakesviaApi()
     }
     
-    func backgroundAdd(data : JSON!) {
+    func backgroundAdd(_ data : JSON!) {
         
         deleteCupcakes()
         
-        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        let queue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
         // Import many items in a background thread
-        dispatch_async(queue) {
+        queue.async {
             // Get new realm and table since we are in a new thread
             let realm = try! Realm()
             realm.beginWrite()
@@ -140,29 +137,32 @@ class CupcakeTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return results.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "CupcakeTableViewCell"
 
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CupcakeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CupcakeTableViewCell
         
         let object = results[indexPath.row]
         cell.cupcakeName?.text = object.name
         cell.rating.rating = Int(object.rating)
-        cell.cupcakeImage.kf_setImageWithURL(NSURL(string: "\(WEBSITE_BASE_URL)\(object.image)")!,
-                                     placeholderImage: nil,
-                                     optionsInfo: [.Transition(ImageTransition.Fade(1))])
+        cell.cupcakeImage.kf.setImage(with: URL(string: "\(WEBSITE_BASE_URL)\(object.image)")!,
+                              placeholder: nil,
+                              options: [.transition(.fade(1))],
+                              progressBlock: nil,
+                              completionHandler: nil)
+        
         /*
         
         let photoURL = NSURL(string:"\(WEBSITE_BASE_URL)\(object.image)")
@@ -204,14 +204,14 @@ class CupcakeTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCupcake" {
-            let naviController = segue.destinationViewController as! UINavigationController
+            let naviController = segue.destination as! UINavigationController
             let cakeDetailViewController = naviController.viewControllers.first as! DetailViewController
             
             // Get the cell that generated this segue.
             if let selectedCakeCell = sender as? CupcakeTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedCakeCell)!
+                let indexPath = tableView.indexPath(for: selectedCakeCell)!
                 cakeDetailViewController.cupcake = results[indexPath.row]
             }
         }

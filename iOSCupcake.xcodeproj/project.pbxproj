@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F276A726BB2E9D251424F68 /* Pods_iOSCupcake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0172E2BD9F500D5D8BAE70B /* Pods_iOSCupcake.framework */; };
+		1DDADC485403CD7F90FBE30F /* Pods_iOSCupcakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63684DBC46E40A6B86889FE2 /* Pods_iOSCupcakeUITests.framework */; };
 		3CE1AEF31D5710C500F4027E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1AEF21D5710C500F4027E /* AppDelegate.swift */; };
 		3CE1AEF51D5710C500F4027E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1AEF41D5710C500F4027E /* DetailViewController.swift */; };
 		3CE1AEF81D5710C500F4027E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1AEF61D5710C500F4027E /* Main.storyboard */; };
@@ -26,6 +26,8 @@
 		3CE1AF2F1D571BC500F4027E /* CupcakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1AF2D1D571BC500F4027E /* CupcakeTableViewCell.swift */; };
 		3CE1AF301D571BC500F4027E /* CupcakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1AF2D1D571BC500F4027E /* CupcakeTableViewCell.swift */; };
 		3CE1AF321D581DB300F4027E /* UIImage+Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE1AF311D581DB300F4027E /* UIImage+Colorize.swift */; };
+		AB9787278455FF762E831C93 /* Pods_iOSCupcakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D66AFEE51C59881479B090 /* Pods_iOSCupcakeTests.framework */; };
+		ED7B992DF22788B55D8D62D4 /* Pods_iOSCupcake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150863274737A54F9C7C01C4 /* Pods_iOSCupcake.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09F52D0F016DA1300FD088BC /* Pods-iOSCupcakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcakeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcakeTests/Pods-iOSCupcakeTests.release.xcconfig"; sourceTree = "<group>"; };
+		150863274737A54F9C7C01C4 /* Pods_iOSCupcake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCupcake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1AEEF1D5710C500F4027E /* iOSCupcake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCupcake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE1AEF21D5710C500F4027E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE1AEF41D5710C500F4027E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +68,13 @@
 		3CE1AF291D57195300F4027E /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		3CE1AF2D1D571BC500F4027E /* CupcakeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CupcakeTableViewCell.swift; sourceTree = "<group>"; };
 		3CE1AF311D581DB300F4027E /* UIImage+Colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Colorize.swift"; sourceTree = "<group>"; };
-		56FFD0F6D06BB430C908BE1C /* Pods-iOSCupcake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcake.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake.release.xcconfig"; sourceTree = "<group>"; };
-		E0172E2BD9F500D5D8BAE70B /* Pods_iOSCupcake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCupcake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED2E1C6CD48B05EE7B46722A /* Pods-iOSCupcake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake.debug.xcconfig"; sourceTree = "<group>"; };
+		3E2E528EC82EDC1715042C41 /* Pods-iOSCupcake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcake.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake.debug.xcconfig"; sourceTree = "<group>"; };
+		49603B0A04059970EBA6260D /* Pods-iOSCupcake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcake.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake.release.xcconfig"; sourceTree = "<group>"; };
+		51CA2D25A8F03C6F12FDB418 /* Pods-iOSCupcakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcakeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcakeUITests/Pods-iOSCupcakeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		58BF8721C9B1CC61680F8997 /* Pods-iOSCupcakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcakeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcakeUITests/Pods-iOSCupcakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		63684DBC46E40A6B86889FE2 /* Pods_iOSCupcakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCupcakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3D66AFEE51C59881479B090 /* Pods_iOSCupcakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCupcakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F7DFD069FB2AC42599F3A3 /* Pods-iOSCupcakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCupcakeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSCupcakeTests/Pods-iOSCupcakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F276A726BB2E9D251424F68 /* Pods_iOSCupcake.framework in Frameworks */,
+				ED7B992DF22788B55D8D62D4 /* Pods_iOSCupcake.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9787278455FF762E831C93 /* Pods_iOSCupcakeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,16 +98,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DDADC485403CD7F90FBE30F /* Pods_iOSCupcakeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		066276F13D9BB275F37A0575 /* Frameworks */ = {
+		1906C744C15587DE107D2B46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0172E2BD9F500D5D8BAE70B /* Pods_iOSCupcake.framework */,
+				150863274737A54F9C7C01C4 /* Pods_iOSCupcake.framework */,
+				A3D66AFEE51C59881479B090 /* Pods_iOSCupcakeTests.framework */,
+				63684DBC46E40A6B86889FE2 /* Pods_iOSCupcakeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +122,8 @@
 				3CE1AF061D5710C500F4027E /* iOSCupcakeTests */,
 				3CE1AF111D5710C500F4027E /* iOSCupcakeUITests */,
 				3CE1AEF01D5710C500F4027E /* Products */,
-				A08C4A959D66DFB8EC08013C /* Pods */,
-				066276F13D9BB275F37A0575 /* Frameworks */,
+				CCEB59ECB383C718EC441E59 /* Pods */,
+				1906C744C15587DE107D2B46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,11 +198,15 @@
 			path = tableviewcells;
 			sourceTree = "<group>";
 		};
-		A08C4A959D66DFB8EC08013C /* Pods */ = {
+		CCEB59ECB383C718EC441E59 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ED2E1C6CD48B05EE7B46722A /* Pods-iOSCupcake.debug.xcconfig */,
-				56FFD0F6D06BB430C908BE1C /* Pods-iOSCupcake.release.xcconfig */,
+				3E2E528EC82EDC1715042C41 /* Pods-iOSCupcake.debug.xcconfig */,
+				49603B0A04059970EBA6260D /* Pods-iOSCupcake.release.xcconfig */,
+				A6F7DFD069FB2AC42599F3A3 /* Pods-iOSCupcakeTests.debug.xcconfig */,
+				09F52D0F016DA1300FD088BC /* Pods-iOSCupcakeTests.release.xcconfig */,
+				58BF8721C9B1CC61680F8997 /* Pods-iOSCupcakeUITests.debug.xcconfig */,
+				51CA2D25A8F03C6F12FDB418 /* Pods-iOSCupcakeUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -202,12 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE1AF171D5710C500F4027E /* Build configuration list for PBXNativeTarget "iOSCupcake" */;
 			buildPhases = (
-				1A19690EAFA0FD1E1D53BA4A /* Check Pods Manifest.lock */,
+				296129DD9606390D89F44236 /* [CP] Check Pods Manifest.lock */,
 				3CE1AEEB1D5710C500F4027E /* Sources */,
 				3CE1AEEC1D5710C500F4027E /* Frameworks */,
 				3CE1AEED1D5710C500F4027E /* Resources */,
-				B4F7A1CD134CA5FBA629A020 /* Embed Pods Frameworks */,
-				AC42B9F4B5C28746D98894CB /* Copy Pods Resources */,
+				2012BEA236E26215A01B6A46 /* [CP] Embed Pods Frameworks */,
+				3F2B81F29A8FA16FEC6D6A85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE1AF1A1D5710C500F4027E /* Build configuration list for PBXNativeTarget "iOSCupcakeTests" */;
 			buildPhases = (
+				E56559D409DEE654DA080D0B /* [CP] Check Pods Manifest.lock */,
 				3CE1AEFF1D5710C500F4027E /* Sources */,
 				3CE1AF001D5710C500F4027E /* Frameworks */,
 				3CE1AF011D5710C500F4027E /* Resources */,
+				2ACE08DE61180A791F78A207 /* [CP] Embed Pods Frameworks */,
+				282083EE15A7E2F46AF53DD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE1AF1D1D5710C500F4027E /* Build configuration list for PBXNativeTarget "iOSCupcakeUITests" */;
 			buildPhases = (
+				D44FDF6D698641EF79A42FA8 /* [CP] Check Pods Manifest.lock */,
 				3CE1AF0A1D5710C500F4027E /* Sources */,
 				3CE1AF0B1D5710C500F4027E /* Frameworks */,
 				3CE1AF0C1D5710C500F4027E /* Resources */,
+				871FAE13BEBA0942C274A9F9 /* [CP] Embed Pods Frameworks */,
+				9E0AC4F09D413834E9DC809E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,13 +289,16 @@
 					3CE1AEEE1D5710C500F4027E = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = ZBZ6445J8B;
+						LastSwiftMigration = 0820;
 					};
 					3CE1AF021D5710C500F4027E = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 3CE1AEEE1D5710C500F4027E;
 					};
 					3CE1AF0D1D5710C500F4027E = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 3CE1AEEE1D5710C500F4027E;
 					};
 				};
@@ -326,29 +351,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A19690EAFA0FD1E1D53BA4A /* Check Pods Manifest.lock */ = {
+		2012BEA236E26215A01B6A46 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC42B9F4B5C28746D98894CB /* Copy Pods Resources */ = {
+		282083EE15A7E2F46AF53DD8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcakeTests/Pods-iOSCupcakeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		296129DD9606390D89F44236 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2ACE08DE61180A791F78A207 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcakeTests/Pods-iOSCupcakeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F2B81F29A8FA16FEC6D6A85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,19 +426,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4F7A1CD134CA5FBA629A020 /* Embed Pods Frameworks */ = {
+		871FAE13BEBA0942C274A9F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcake/Pods-iOSCupcake-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcakeUITests/Pods-iOSCupcakeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E0AC4F09D413834E9DC809E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSCupcakeUITests/Pods-iOSCupcakeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D44FDF6D698641EF79A42FA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E56559D409DEE654DA080D0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -532,7 +647,7 @@
 		};
 		3CE1AF181D5710C500F4027E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED2E1C6CD48B05EE7B46722A /* Pods-iOSCupcake.debug.xcconfig */;
+			baseConfigurationReference = 3E2E528EC82EDC1715042C41 /* Pods-iOSCupcake.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -541,12 +656,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3CE1AF191D5710C500F4027E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56FFD0F6D06BB430C908BE1C /* Pods-iOSCupcake.release.xcconfig */;
+			baseConfigurationReference = 49603B0A04059970EBA6260D /* Pods-iOSCupcake.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -555,51 +671,60 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		3CE1AF1B1D5710C500F4027E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6F7DFD069FB2AC42599F3A3 /* Pods-iOSCupcakeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iOSCupcakeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSCupcake.app/iOSCupcake";
 			};
 			name = Debug;
 		};
 		3CE1AF1C1D5710C500F4027E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F52D0F016DA1300FD088BC /* Pods-iOSCupcakeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = iOSCupcakeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcakeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSCupcake.app/iOSCupcake";
 			};
 			name = Release;
 		};
 		3CE1AF1E1D5710C500F4027E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BF8721C9B1CC61680F8997 /* Pods-iOSCupcakeUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iOSCupcakeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcakeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = iOSCupcake;
 			};
 			name = Debug;
 		};
 		3CE1AF1F1D5710C500F4027E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51CA2D25A8F03C6F12FDB418 /* Pods-iOSCupcakeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = iOSCupcakeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hassanabid.iOSCupcakeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = iOSCupcake;
 			};
 			name = Release;

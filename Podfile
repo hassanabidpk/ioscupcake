@@ -4,11 +4,10 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'iOSCupcake' do
-pod 'Alamofire', '~> 3.0'
-pod 'Realm', '= 1.0.2'
-pod 'RealmSwift', '= 1.0.2'
-pod 'SwiftyJSON'
-pod 'Kingfisher', '~> 2.4'
+  pod 'Alamofire', '~> 4.0'
+  pod 'RealmSwift'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 3.0'
 end
 
 target 'iOSCupcakeTests' do
@@ -19,3 +18,11 @@ target 'iOSCupcakeUITests' do
 
 end
 
+# Realm
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
