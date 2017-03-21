@@ -1,15 +1,18 @@
 language: objective-c
-osx_image: xcode7.3
-podfile: Podfile
-xcode_workspace: iOSCupcake.xcworkspace
-xcode_scheme: iOSCupcake
-xcode_sdk: iphonesimulator9.1
-# before_install:
-# - gem install cocoapods
-# - export LANG=en_US.UTF-8
-# - brew update
-# - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-# - pod install
-# script: xcodebuild -scheme iOSCupcake -workspace iOSCupcake.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
-notifications:
-  email: false
+osx_image: xcode8.2
+
+branches:
+  only:
+    - master
+env:
+  - LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
+before_install:
+  - rvm install ruby-2.2.2
+  - gem install cocoapods
+  - gem install xcpretty -N
+  - brew update
+  - brew install swiftlint || true
+  - pod update
+script:
+  - set -o pipefail
+  - xcodebuild -workspace iOSCupcake.xcworkspace -scheme iOSCupcake -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
